@@ -52,5 +52,10 @@ class RNCombinedChartView: RNBarLineChartViewBase {
     func setHighlightFullBarEnabled(_ enabled: Bool) {
         _chart.highlightFullBarEnabled = enabled
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        _chart.frame = self.bounds
+    }
 
 }

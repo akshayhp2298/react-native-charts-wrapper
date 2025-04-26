@@ -91,4 +91,8 @@ class RNRadarChartView: RNYAxisChartViewBase {
     func setWebColorInner(_ color: NSNumber) {
         chart.innerWebColor = RCTConvert.uiColor(color.intValue)
     }
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        _chart.frame = self.bounds
+    }
 }
